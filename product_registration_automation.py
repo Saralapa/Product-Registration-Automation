@@ -5,15 +5,18 @@ import pandas as pd
 
 pyautogui.PAUSE = 0.3 # Sets a delay of 0.3 seconds after each pyautogui function is executed.
 
+EMAIL = "youremail@example.com"  # The user's email address for logging into the website.
+PASSWORD = "yourpassword"  # The user's password for logging into the website.
+
 webbrowser.open("https://dlp.hashtagtreinamentos.com/python/intensivao/login") # Open the user's default browser at the system link
 time.sleep(3) # Wait 3 seconds for the browser to open and the site to load
 
 pyautogui.click(x=774, y=388) # Select the email field (use the file get_position.py to know the correct coordinates)
 
 # Write your email and password (In this example, any email and password will work)
-pyautogui.write("your@email.com")
+pyautogui.write(EMAIL)
 pyautogui.press("tab") # Move to the next field
-pyautogui.write("your password")
+pyautogui.write(PASSWORD)
 pyautogui.click(x=972, y=560) # Click on the login button (use the get_position.py file to find the correct coordinates)
 time.sleep(3)
 
